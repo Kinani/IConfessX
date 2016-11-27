@@ -1,7 +1,9 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "Xamarin.Forms": "2.0.0.6482"
+    "Microsoft.Azure.Mobile.Client": "3.0.3",
+    "Microsoft.Azure.Mobile.Client.SQLiteStore": "3.0.3",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Xamarin.Forms": "2.3.3.168"
   },
   "frameworks": {
     "uap10.0": {}

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IConfessX.Views.ViewConfessionPage"
+             Title="View Confession">
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <StackLayout Grid.Row="0" HorizontalOptions="LayoutOptions.Start" VerticalOptions="LayoutOptions.Start" Padding="10,30,10,5">
+      <Label TextColor="#000000" Text="View/Edit your confession"></Label>
+    </StackLayout>
+    <StackLayout Grid.Row="1" Padding="15,5,15,0">
+      <Label TextColor="#000000" Text="Your confession:"></Label>
+      <Editor x:Name="newThreadContent" HeightRequest="150"></Editor>
+    </StackLayout>
+    <!--Add radio btn for delete-->
+    <Button Grid.Row="2" x:Name="UpdateBtn" Clicked="OnUpdate" MinimumHeightRequest="30" Text="Update"></Button>
+  </Grid>
+</ContentPage>

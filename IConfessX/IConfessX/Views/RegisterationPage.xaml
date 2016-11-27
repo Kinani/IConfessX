@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IConfessX.Views.RegisterationPage"
+             Title="Registeration">
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="100" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
+                       IsVisible="False" IsEnabled="True" x:Name="syncIndicator">
+    </ActivityIndicator>
+    <StackLayout Grid.Row="0" HorizontalOptions="LayoutOptions.Center" VerticalOptions="LayoutOptions.Start" Padding="10,30,10,5">
+      <Label TextColor="#000000" Text="Register Now"></Label>
+    </StackLayout>
+    <StackLayout Grid.Row="1" Padding="15,5,0,0" HorizontalOptions="LayoutOptions.Center" VerticalOptions="LayoutOptions.Center">
+      <Entry x:Name="nicknameEntry" Placeholder="Enter your Nickname/name"></Entry>
+      <Entry x:Name="passwordEntry" Placeholder="Enter a password to use within our application" IsPassword="True"></Entry>
+      <Entry x:Name="emailEntry" Placeholder="Enter your Email"></Entry>
+    </StackLayout>
+    <Button Grid.Row="2" x:Name="RegBtn" Clicked="OnReg" MinimumHeightRequest="30" Text="Be a part of this community now!"></Button>
+  </Grid>
+
+</ContentPage>

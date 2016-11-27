@@ -9,11 +9,13 @@ namespace IConfessX
 {
     public partial class App : Application
     {
+        public static string USERID { get;  set; }
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new IConfessX.MainPage();
+            MainPage = new NavigationPage(new IConfessX.Views.LoginPage());
         }
 
         protected override void OnStart()
