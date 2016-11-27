@@ -14,7 +14,7 @@
     </StackLayout>
     <StackLayout Grid.Row="1" Padding="15,5,15,0">
       <Label TextColor="#000000" Text="Your confession:"></Label>
-      <Editor x:Name="newThreadContent" HeightRequest="150"></Editor>
+      <Editor x:Name="newThreadContent" ></Editor>
     </StackLayout>
     <!--Add radio btn for delete-->
     <Button Grid.Row="2" x:Name="UpdateBtn" Clicked="OnUpdate" MinimumHeightRequest="30" Text="Update"></Button>

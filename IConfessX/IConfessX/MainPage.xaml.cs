@@ -24,6 +24,7 @@ namespace IConfessX
             });
 
         }
+        
         protected async override void OnAppearing()
         {
             base.OnAppearing();
@@ -132,5 +133,6 @@ namespace IConfessX
                 }
             }
         }
+        
     }
 }

@@ -26,11 +26,11 @@
             </ViewCell.ContextActions>
             <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
               <StackLayout Orientation="Horizontal">
-                <Label>Rate: </Label>
+                <Label>Rate:</Label>
                 <Label Text="{Binding TRate}"></Label>
               </StackLayout>
-              <StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
-                <Label Text="{Binding TContent}"></Label>
+              <StackLayout x:Name="ContentLayout" Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical" >
+                <Label Text="{Binding TContent}" LineBreakMode="WordWrap"></Label>
                 <!--add rate-->
               </StackLayout>
             </StackLayout>
