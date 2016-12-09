@@ -5,16 +5,23 @@
              Title="Login Page">
   <Grid RowSpacing="0">
     <Grid.RowDefinitions>
-      <RowDefinition Height="100" />
+      
+      <RowDefinition Height="180" />
       <RowDefinition Height="*" />
       <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
     <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
                        IsVisible="False" IsEnabled="True" x:Name="syncIndicator">
     </ActivityIndicator>
-    <StackLayout Grid.Row="0" HorizontalOptions="LayoutOptions.Center" VerticalOptions="LayoutOptions.Start" Padding="10,30,10,5">
+    <!--<StackLayout Grid.Row="0" HorizontalOptions="LayoutOptions.Center" VerticalOptions="LayoutOptions.Start" Padding="10,30,10,5">
       <Label TextColor="#000000" Text="Login Now"></Label>
-    </StackLayout>
+    </StackLayout>-->
+    <Grid Grid.Row="0" HorizontalOptions="Center" Margin="0,70,0,0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="150"/>
+      </Grid.ColumnDefinitions>
+      <Image Source="logo.PNG" Aspect="Fill"/>
+    </Grid>
     <StackLayout Grid.Row="1" Padding="15,5,0,0" HorizontalOptions="LayoutOptions.Center" VerticalOptions="LayoutOptions.Center">
       <Entry x:Name="emailEntry" Placeholder="Enter your Email" WidthRequest="300"></Entry>
       <Entry x:Name="passwordEntry" Placeholder="Enter your Password" IsPassword="True" WidthRequest="300"></Entry>

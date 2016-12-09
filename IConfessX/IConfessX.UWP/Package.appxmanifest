@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="61228Kinani.I-Confess" Publisher="CN=3F1CACF3-D0D2-4127-8784-4FE165A82D6B" Version="1.1.1.0" />
+  <Identity Name="61228Kinani.I-Confess" Publisher="CN=3F1CACF3-D0D2-4127-8784-4FE165A82D6B" Version="1.1.2.0" />
   <mp:PhoneIdentity PhoneProductId="4ea27c3e-7c24-4b6a-a7ff-e175cf206737" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>I-Confess</DisplayName>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="IConfessX.UWP.App">
-      <uap:VisualElements DisplayName="I-Confess" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\logo-iconfess44x44.png" Description="IConfessX.UWP" BackgroundColor="#ffffff">
+      <uap:VisualElements DisplayName="I-Confess" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\logo-iconfess44x44.png" Description="IConfess is a platform that allows you to confess for the online community." BackgroundColor="#ffffff">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
@@ -23,6 +23,12 @@
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#ffffff" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="portraitFlipped" />
+          <uap:Rotation Preference="landscapeFlipped" />
+        </uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
