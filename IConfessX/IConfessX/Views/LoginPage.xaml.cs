@@ -31,19 +31,14 @@ namespace IConfessX.Views
                     "Check for your Internet connection", "OK");
             }
         }
-
-        protected async override void OnAppearing()
+        
+        private async void LoginLabel_tap_Tapped(object sender, EventArgs e)
         {
-            base.OnAppearing();
-
-            if(!CrossConnectivity.Current.IsConnected)
+            if (!CrossConnectivity.Current.IsConnected)
             {
                 await DisplayAlert("Error",
                     "Check for your Internet connection", "OK");
             }
-        }
-        private async void LoginLabel_tap_Tapped(object sender, EventArgs e)
-        {
             if (await vm.CheckForExistingUser(emailEntry.Text))
             {
                 Navigation.PushAsync(new MainPage());
