@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Plugin.Connectivity;
 using Xamarin.Forms;
 
 namespace IConfessX.Views
@@ -19,8 +19,28 @@ namespace IConfessX.Views
 
             var loginLabel_tap = new TapGestureRecognizer();
             loginLabel_tap.Tapped += LoginLabel_tap_Tapped;
-
+            CrossConnectivity.Current.ConnectivityChanged += Current_ConnectivityChanged;
             LoginLabel.GestureRecognizers.Add(loginLabel_tap);
+        }
+
+        private async void Current_ConnectivityChanged(object sender, Plugin.Connectivity.Abstractions.ConnectivityChangedEventArgs e)
+        {
+            if (!e.IsConnected)
+            {
+                await DisplayAlert("Error",
+                    "Check for your Internet connection", "OK");
+            }
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if(!CrossConnectivity.Current.IsConnected)
+            {
+                await DisplayAlert("Error",
+                    "Check for your Internet connection", "OK");
+            }
         }
         private async void LoginLabel_tap_Tapped(object sender, EventArgs e)
         {
